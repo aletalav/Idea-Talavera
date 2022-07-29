@@ -1,0 +1,554 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none  
+}
+/* End Reset */
+
+/* Header Nav*/
+body{
+    background-color: oldlace;
+}
+
+header{
+    background-color: rgb(128, 89, 61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+
+.navbar{
+    background-color: rgb(128, 89, 61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li{
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin: 0.3rem;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    position: relative;
+    transition: 0.2s;
+}
+
+.menu ul li a{
+    color: beige;
+}
+
+.menu ul li:hover{
+    font-weight: bold;
+    accent-color: beige;
+}
+
+.menu ul li .submenu{
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: rgb(247, 247, 247);
+    top: 2.3rem;
+    font-weight: 100;
+    transition: 0.2s;
+}
+
+.menu ul li .submenu li{
+    font-size: 1rem;
+    transition: 0.2s
+}
+
+.menu ul li:hover > .submenu{
+    display: block;
+}
+
+.nav-item{
+    font-family: 'Archivo', sans-serif;
+    transition: 0.2s;
+}
+
+.header ul li a :active{
+    background-color: blanchedalmond;
+}
+/* End Header Nav*/
+
+/* Banner */
+.banner{
+    width: 100%;
+}
+
+.banner img{
+    max-width: 100%;
+    max-height: 100%;
+}
+/* End Banner */
+
+/* Best Seller */
+.best_seller{
+    display: table;
+    margin: auto;
+    padding: 0% 0% 3% 0%;
+    justify-items: center;
+}
+
+.best_seller table tbody tr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1%;
+    grid-template-areas: "product product product product";
+}
+
+.best_seller h3{
+    font-family: 'Cormorant', serif;
+    font-size: 4rem;
+    padding: 2.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    color: rgb(128, 89, 61);
+}
+
+.container h3{
+    font-family: 'Cormorant', serif;
+    font-size: 4rem;
+    padding: 2.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    color: rgb(128, 89, 61);
+}
+
+.product{
+    display: grid;
+    padding: 0 0.7rem 3.7rem 0;    
+    transition: 0.2s;
+}
+
+.product_title a:hover{
+    transform: scale(1.1);
+    color: rgb(128, 89, 61);
+}
+
+
+.product_title a{
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    margin: 0.6rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(128, 89, 61);
+    transition: 0.2s;
+}
+
+.product_price{
+    font-family: 'Archivo', sans-serif; 
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add_to_cart:hover{
+    background-color:rgb(128, 89, 61);
+    font-weight: bold;
+    color: white;
+}
+
+.add_to_cart{
+    border-style: solid;
+    border-color: black;
+    padding: 0.3rem 4.6rem 0.3rem 4.6rem;
+    font-family: 'Archivo', sans-serif; 
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: wheat;
+    transition: 0.5s;
+}
+/* End Best Seller */
+/* Best Seller Mobile*/
+.container-mobile h3{
+    font-family: 'Cormorant', serif;
+    font-size: 4rem;
+    padding: 2.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    color: rgb(128, 89, 61);
+}
+
+
+/* Collection */
+.collections{
+    display: table;
+    margin: 0 auto;
+    padding: 0% 0% 3% 0%;
+    justify-items: center;
+}
+
+.collections h3{
+    font-family: 'Cormorant', serif;
+    font-size: 4rem;
+    padding: 2.5rem 0 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    color: rgb(128, 89, 61);
+}
+
+.collection{
+    position: relative;
+    text-align: center;
+    padding: 0.3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3%;
+    justify-content: center;
+}
+
+.collection_title{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d9d9d9
+}
+
+.collection_about{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Archivo', sans serif;
+    font-size: 1.1rem;
+    color: #d9d9d9;
+    width: 40%;
+}
+
+.collection_info{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-color: #d9d9d9;
+    padding: 0.3rem 4.6rem 0.3rem 4.6rem;
+    font-family: 'Archivo', sans-serif; 
+    font-size: 1rem;
+    color: #d9d9d9;
+    transition: 0.2s;
+}
+
+.collection_info:hover{
+    background-color: wheat;
+    font-weight: bold;
+    color: black;
+    border-color: black;
+}
+/* End Collection */
+
+/* Footer */
+footer{
+    background-color: wheat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+/* Newsletter */
+form{
+    width: 20%;
+    margin: 2%;
+    position: relative;
+}
+
+legend{
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    margin: 0.75rem;
+    font-weight: bold;
+}
+
+form p{
+    font-family: 'Archivo', sans serif;
+    font-size: 1rem;
+    padding: 0.3rem 0.75rem 0.75rem 0.75rem;
+}
+
+.newsletter_name{
+    width: 20%;
+    font-family: 'Archivo', sans serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.6rem;
+}
+
+.newsletter_email{
+    width: 20%;
+    font-family: 'Archivo', sans serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.6rem;
+}
+
+.newsletter_name input{
+    width: 18rem;
+}
+
+.newsletter_email input{
+    width: 18rem;    
+}
+/* End Newsletter */
+
+/* Links */
+.footer_title{
+    font-family: 'Cormorant', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0px 0px 1.5rem 0px;
+}
+
+table tbody tr td ul li{
+    font-family: 'Archivo', sans serif;
+    font-size: 1rem;
+    padding: 0.3rem;
+}
+
+table tbody tr td ul{
+    padding: 1.5rem;
+}
+
+.links:hover{
+    font-weight: bold;
+}
+
+.column{
+    padding: 0px 0px 1.5rem 0px;
+    float: left;
+    width: 33%;
+    padding-right: 3.7rem;
+}
+
+.links{
+    font-family: 'Archivo', sans serif;
+    font-size: 1rem;
+}
+/* End Links */
+/* End Footer */
+
+/* Products */
+.sub_nav{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    padding: 1%;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.sub_nav ul li{
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin: 0.3rem;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    position: relative;
+}
+
+.sub_nav ul li:hover{
+    font-weight: bold;
+}
+
+.store_products{
+    display: table;
+    margin: auto;
+}
+
+.store_products table tbody tr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 3%;
+    grid-template-areas: "product product product product";
+    justify-content: center;
+}
+
+/* End Products */
+
+/* LoremIpsum */
+.producto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_single{
+    width: 44rem;
+}
+
+.product_title{
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.product_about{
+    padding: 2% 15% 5% 15%;
+}
+
+.about_title{
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0px 0px 0.7rem 0px;
+}
+
+.about{
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+}
+
+.price{
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.8rem;
+    padding: 0% 15% 5% 15%;
+}
+
+.product_image{
+    margin: 2% 4% 2% 15%;
+}
+/* End LoremIpsum */
+
+/* About Us*/
+.about_us h3{
+    font-family: 'Cormorant', serif;
+    font-size: 3.7rem;
+    padding: 2.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about_us_text{
+    width: 50%;
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.8rem;
+    display: table;
+    margin: 0 auto;
+    padding: 0.3rem;
+}
+/* End About Us*/
+
+/* Our Team*/
+.our_team h3{
+    font-family: 'Cormorant', serif;
+    font-size: 3.7rem;
+    padding: 2.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.our_team{
+    display: table;
+    margin: 0 auto;
+}
+
+.contact form{
+    display: table;
+    margin: 0 auto;
+    width: 60%;
+    padding: 5%;
+}
+
+.message{
+    width: 20%;
+    font-family: 'Archivo', sans serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.6rem;
+}
+
+.message input{
+    width: 18.7rem;
+    height: 9rem;
+    overflow: scroll;
+}
+
+.footer-mobile{
+    background-color: wheat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    display:none;
+}
+
+/* End Our Team*/
+
+/* Media Queries*/
+@media screen and (max-width: 600px) {
+
+    .best_seller table tbody tr{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "product product";
+    }
+
+    .collections table tbody tr{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "product";
+    }
+
+    .store_products table tbody tr{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "product product";
+    }
+
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "form" 
+                            "infos";
+
+    }
+
+    footer{
+        background-color: wheat;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        display:none;
+    }
+
+    .footer-mobile{
+        background-color: wheat;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        display:block;
+    }
+
+    .collection_about{
+        display: none;
+    }
+
+}
