@@ -1,6 +1,8 @@
 //import
 @import "utilities/variables";
-
+@import "utilities/mixin";
+@import "utilities/maps";
+@import "utilities/extend";
 
 //nesting
 
@@ -11,14 +13,12 @@ body{
 
 header{
     background-color: $second-color;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     align-items: center;
     top: 0;
     .navbar{
         background-color: $second-color;
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         align-items: center;
 
         .nav-item{
@@ -39,7 +39,7 @@ header{
         ul{
             li{
                 font-family: $font-sans;
-                font-size: 1.1rem;
+                font-size: map-get($map: $sizes, $key: size-1-1);
                 display: inline-block;
                 margin: 0.3rem;
                 padding: 0.6rem 1rem 0.6rem 1rem;
@@ -65,7 +65,7 @@ header{
                     transition: 0.2s;
 
                     li{ 
-                        font-size: 1rem;
+                        font-size: map-get($map: $sizes, $key: size-1);
                         transition: 0.2s 
                     }
                 }
@@ -101,23 +101,13 @@ header{
         }
     }
     h3{
-        font-family: $font-serif;
-        font-size: 4rem;
-        padding: 2.5rem 0 1.5rem 0;
-        display: flex;
-        justify-content: center;
-        color:$second-color
+        @extend %h3;
     }
 }
 
 .container{
     h3{
-        font-family: $font-serif;
-        font-size: 4rem;
-        padding: 2.5rem 0 1.5rem 0;
-        display: flex;
-        justify-content: center;
-        color:$second-color
+        @extend %h3;
     }
     .row{
         .col{
@@ -127,8 +117,7 @@ header{
                     font-size: 2rem;
                     margin: 0.6rem;
                     font-weight: bold;
-                    display: flex;
-                    justify-content: center;
+                    @include flex-center;
                     align-items: center;
                     color: $second-color;
                     transition: 0.2s;
@@ -140,10 +129,9 @@ header{
             }
             .product_price{
                 font-family: $font-sans;
-                font-size: 1rem;
-                margin-bottom: 1rem;
-                display: flex;
-                justify-content: space-around;
+                font-size: map-get($map: $sizes, $key: size-1);
+                margin-bottom: map-get($map: $sizes, $key: size-1);
+                @include flex-spacearound;
                 align-items: center;
             }
             .add_to_cart{
@@ -151,9 +139,8 @@ header{
                 border-color: black;
                 padding: 0.3rem 4.6rem 0.3rem 4.6rem;
                 font-family: $font-serif; 
-                font-size: 1rem;
-                display: flex;
-                justify-content: space-around;
+                font-size: map-get($map: $sizes, $key: size-1);
+                @include flex-spacearound;
                 align-items: center;
                 background-color: $fourth-color;
                 transition: 0.5s;
@@ -163,12 +150,7 @@ header{
 }
 .container-mobile{
     h3{
-        font-family: $font-serif;
-        font-size: 4rem;
-        padding: 2.5rem 0 1.5rem 0;
-        display: flex;
-        justify-content: center;
-        color: $second-color;
+        @extend %h3;
     }
 }
 
@@ -200,7 +182,7 @@ header{
                     left: 50%;
                     transform: translate(-50%, -50%);
                     font-family: $font-serif;
-                    font-size: 1.1rem;
+                    font-size: map-get($map: $sizes, $key: size-1-1);
                     color: $third-color;
                     width: 40%;
                 }
@@ -213,7 +195,7 @@ header{
                     border-color: $third-color;
                     padding: 0.3rem 4.6rem 0.3rem 4.6rem;
                     font-family: $font-sans; 
-                    font-size: 1rem;
+                    font-size: map-get($map: $sizes, $key: size-1);
                     color: $fourth-color;
                     transition: 0.2s;
                     :hover{
@@ -231,8 +213,7 @@ header{
 //footer
 .footer{
     background-color: $fourth-color;
-    display: flex;
-    justify-content: space-around;
+    @include flex-spacearound;
     align-items: center;
     width: 100%;
     .form{
@@ -248,13 +229,13 @@ header{
             }
             p{
                 font-family: $font-serif;
-                font-size: 1rem;
+                font-size: map-get($map: $sizes, $key: size-1);
                 padding: 0.3rem 0.75rem 0.75rem 0.75rem;
             }
             .newsletter_name{
                 width: 20%;
                 font-family: $font-sans;
-                font-size: 1rem;
+                font-size: map-get($map: $sizes, $key: size-1);
                 font-weight: bold;
                 padding: 0.6rem;
                 input{
@@ -264,7 +245,7 @@ header{
             .newsletter_email{
                 width: 20%;
                 font-family: $font-serif;
-                font-size: 1rem;
+                font-size: map-get($map: $sizes, $key: size-1);
                 font-weight: bold;
                 padding: 0.6rem;
                 input{
@@ -289,7 +270,7 @@ header{
                 }
                 .links{
                     font-family: $font-serif;
-                    font-size: 1rem;
+                    font-size: map-get($map: $sizes, $key: size-1);
                     :hover{
                         font-weight: bold;
                     }
@@ -334,8 +315,7 @@ header{
 
     footer{
         background-color: $fourth-color;
-        display: flex;
-        justify-content: space-around;
+        @include flex-spacearound;
         align-items: center;
         width: 100%;
         display:none;
@@ -343,8 +323,7 @@ header{
 
     .footer-mobile{
         background-color: $fourth-color;
-        display: flex;
-        justify-content: space-around;
+        @include flex-spacearound;
         align-items: center;
         width: 100%;
         display:block;
