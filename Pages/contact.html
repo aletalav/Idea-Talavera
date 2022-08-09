@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/main.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Cormorant&display=swap" rel="stylesheet">
-
-    <title>Lorem Ipsum - Faerie</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/main.css">
+    
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Cormorant&display=swap" rel="stylesheet">
+    
+        <title>Products - Faerie</title>
+    </head>
 <body>
     <!-- Nav -->
     <header>
-        <nav class="menu">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="products.html">Shop</a>
-                    <ul class="submenu">
-                        <li>All</li>
-                        <li>Necklaces</li>
-                        <li>Earrings</li>
-                        <li>Bracelets</li>
-                        <li>Rings</li>
-                        <li>On Sale</li>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" aria-current="page" href="products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Shop
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="products.html">All</a></li>
+                      <li><a class="dropdown-item" href="products.html">Necklace</a></li>
+                      <li><a class="dropdown-item" href="products.html">Earrings</a></li>
+                      <li><a class="dropdown-item" href="products.html">Bracelets</a></li>
+                      <li><a class="dropdown-item" href="products.html">Rings</a></li>
+                      <li><a class="dropdown-item" href="products.html">On Sale</a></li>
                     </ul>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
     <!-- End Nav -->
 
@@ -40,8 +60,8 @@
     <div class="contact">
     <form action="" method="get">
         <fieldset>
-            <legend>Subscribe to our Newsletter</legend>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem esse, placeat enim porro cupiditate hic? Excepturi doloribus id harum molestias soluta unde, quam vero porro corporis omnis commodi earum possimus dolores voluptates placeat architecto ipsam quas quia, suscipit, reprehenderit ad!</p>
+            <legend>Nos interesa tu voz</legend>
+            <p>¿Tienes alguna pregunta o comentario? Envianos un mensaje y responderemos en la brevedad</p>
             <div class="newsletter_name">
                 <label for="nombre">Name</label>
                 <input type="text" name="nombre" placeholder="Jane Doe">
@@ -66,7 +86,8 @@
 
     <!-- Footer --> 
     <footer>
-        <form action="" method="get">
+        
+        <form action="" method="get" class="form">
             <fieldset>
                 <legend>Subscribe to our Newsletter</legend>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et sed sed pulvinar faucibus nunc.</p>
@@ -83,8 +104,9 @@
                 </div>
             </fieldset>
         </form>
+        
 
-        <div>
+        <div class="infos">
             <div class="column">
                 <ul>
                     <div class="footer_title">Information</div>
@@ -114,14 +136,69 @@
             </div>
             <div class="footer_title">Follow Us</div>
             <div id="social-icons">
-                <span><img src="../Imagenes/insta.png" alt="instagram"></span>
-                <span><img src="../Imagenes/facebook.png" alt="facebook"></span>
-                <span><img src="../Imagenes/twitter.png" alt="twitter"></span>
-                <span><img src="../Imagenes/youtube.png" alt="youtube"></span>
-                <span><img src="../Imagenes/linkedin.png" alt="linkedin"></span>
+                <span><img src="../Idea-Talavera/Imagenes/insta.png" alt="instagram"></span>
+                <span><img src="../Idea-Talavera/Imagenes/facebook.png" alt="facebook"></span>
+                <span><img src="../Idea-Talavera/Imagenes/twitter.png" alt="twitter"></span>
+                <span><img src="../Idea-Talavera/Imagenes/youtube.png" alt="youtube"></span>
+                <span><img src="../Idea-Talavera/Imagenes/linkedin.png" alt="linkedin"></span>
             </div>
         </div>
     </footer>
-    <!-- End Footer -->        
+     <!-- End Footer --> 
+
+     <div class="footer-mobile">
+        <div class="row">
+            <form action="" method="get" class="form">
+                <fieldset>
+                    <legend>Subscribe to our Newsletter</legend>
+                    <p>Recibe noticias de nuestros nuevos productos, ofertas, eventos, etc... Directamente en tu email.</p>
+                    <div class="newsletter_name">
+                        <label for="nombre">Name</label>
+                        <input type="text" name="nombre" placeholder="Jane Doe">
+                    </div>
+                    <div class="newsletter_email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="jane@doe.com">
+                    </div>
+                    <div class="submit">
+                        <input type="submit">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="row m-5">
+            <div class="footer_title">Follow Us</div>
+                <div class="col-1 m-2">
+                    <a href="https://instagram.com/" target="_blank">
+                        <img src="Imagenes/insta.png" alt="instagram">
+                    </a>                    
+                </div>
+                <div class="col-1 m-2">
+                    <a href="https://facebook.com/" target="_blank">
+                        <img src="/Imagenes/facebook.png" alt="facebook">
+                    </a>
+                </div>
+                <div class="col-1 m-2">
+                    <a href="https://twitter.com/home" target="_blank">
+                        <img src="/Imagenes/twitter.png" alt="twitter">
+                    </a>
+                </div>
+                <div class="col-1 m-2">
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="Imagenes/youtube.png" alt="youtube">
+                    </a>
+                </div>
+                <div class="col-1 m-2">
+                    <a href="https://linkedin.com/" target="_blank">
+                        <img src="/Imagenes/linkedin.png" alt="linkedin">
+                    </a>
+                </div>
+        </div>
+     </div>
+    <!-- End Footer -->  
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> 
 </body>
 </html>

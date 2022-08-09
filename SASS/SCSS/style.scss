@@ -280,6 +280,27 @@ header{
     }
 }
 
+.about_us{
+    h3{
+        @extend %h3;
+        }
+}
+
+.producto{
+    .product_single{
+    width: 20%;
+        h3{
+        @extend %h3;
+        }
+    .product_price{
+        font-family: $font-sans;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $second-color;
+    }
+    }  
+}
+
 //Media
 
 @media screen and (max-width: 600px){
